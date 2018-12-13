@@ -3,7 +3,9 @@
 This component displays a form which can be used to view and/or edit a record in salesforce.<br>
 The component allows you to specify the fields to include in the form.
 
-<br><br>
+
+Provided by <a href="http://www.spoonconsulting.com/" target="_blank">Spoon Consulting</a>
+
 <a href="https://githubsfdeploy.herokuapp.com/?owner=kureem&repo=spoon-customdetails" target="_blank"> <img src="https://andrewfawcett.files.wordpress.com/2014/09/deploy.png"></a>
 <br>
 
