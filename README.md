@@ -45,6 +45,11 @@ The API name of the Object (e.g Account, Contact). It can be any object
 3. Columns (optional) : default = 2<br>
 This is the number of columns in the form to render
 
+<br>
+
+<img src="https://github.com/kureem/spoon-customdetails/blob/master/images/params.PNG"></img>
+
+
 <br><br>
 <a href="https://githubsfdeploy.herokuapp.com/?owner=kureem&repo=spoon-customdetails" target="_blank"> <img src="https://andrewfawcett.files.wordpress.com/2014/09/deploy.png"></a>
 
