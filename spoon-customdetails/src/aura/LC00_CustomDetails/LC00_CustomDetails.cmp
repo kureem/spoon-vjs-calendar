@@ -1,11 +1,11 @@
 <aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes,force:hasRecordId">
     
-    <aura:attribute name="defaultFields" type="String" default="ActionsPerformed__c,AlertRisk__c,DecisionTaken__c,DecisionToBeTaken__c,ActionPlan__c,NextMeetingPlanning__c,StatusSolution__c,FlashReportDate__c,StatusPlanning__c,StatusBudget__c" />
+    <aura:attribute name="defaultFields" type="String" default="Name,AccountNumber,AccountSource"  access="public"/>
     <aura:attribute name="mode" type="String" default="view"></aura:attribute>
-    <aura:attribute name="cols" type="String" default="2"></aura:attribute>
-    <aura:attribute name="objectApiName" type="String" default="Project__c"></aura:attribute>
+    <aura:attribute name="cols" type="String" default="2" access="public"></aura:attribute>
+    <aura:attribute name="objectApiName" type="String" default="Account" access="public"></aura:attribute>
     
-    <aura:attribute name="recordId" type="Id" />
+    <aura:attribute name="recordId" type="Id"  access="public"/>
     <aura:attribute name="fields" type="List" default="[]" />
     <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
     <aura:attribute name="showSpinner" type="Boolean" default="true" />
