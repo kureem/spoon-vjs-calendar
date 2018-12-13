@@ -1,0 +1,61 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes,force:hasRecordId">
+    
+    <aura:attribute name="defaultFields" type="String" default="ActionsPerformed__c,AlertRisk__c,DecisionTaken__c,DecisionToBeTaken__c,ActionPlan__c,NextMeetingPlanning__c,StatusSolution__c,FlashReportDate__c,StatusPlanning__c,StatusBudget__c" />
+    <aura:attribute name="mode" type="String" default="view"></aura:attribute>
+    <aura:attribute name="cols" type="String" default="2"></aura:attribute>
+    <aura:attribute name="objectApiName" type="String" default="Project__c"></aura:attribute>
+    
+    <aura:attribute name="recordId" type="Id" />
+    <aura:attribute name="fields" type="List" default="[]" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="showSpinner" type="Boolean" default="true" />
+    
+    <aura:if isTrue="{!v.mode == 'view'}">
+        
+        <lightning:recordViewForm recordId="{!v.recordId}" objectApiName="{!v.objectApiName}" class="slds-form slds-form_stacked">
+            <div class="slds-grid slds-gutters slds-wrap">
+                <aura:iteration items="{!v.fields}" var="field">
+                    <div class="{!'slds-m-top_small slds-p-right_small slds-col slds-size_1-of-' + v.cols}">
+                        <div class="slds-form-element_readonly">
+                            <lightning:outputField fieldName="{!field}" style="margin-bottom:0px"></lightning:outputField>
+                            <div class="slds-edit">
+                                <lightning:buttonIcon iconName="utility:edit" variant="bare" onclick="{!c.edit}" alternativeText="{!$Label.c.LC00_Edit}" />
+                            </div>
+                        </div>
+                    </div>
+                </aura:iteration>
+            </div>
+            <div class="slds-align_absolute-center slds-p-around_medium" >
+                <lightning:button label="{!$Label.c.LC00_Edit}" variant="brand" onclick="{!c.edit}"></lightning:button>
+            </div>
+        </lightning:recordViewForm>
+        
+        
+        
+        
+    </aura:if>
+    <aura:if isTrue="{!v.mode == 'edit'}">
+        <aura:if isTrue="{!v.showSpinner}">
+            <lightning:spinner />
+        </aura:if>
+        <lightning:recordEditForm onload="{!c.handleLoad}" onsubmit="{!c.handleSubmit}" onsuccess="{!c.handleSuccess}" recordId="{!v.recordId}" objectApiName="{!v.objectApiName}" class="slds-form slds-form_stacked">
+            <!-- the messages component is for error messages -->
+            <lightning:messages />
+            
+            <div class="slds-grid slds-gutters slds-wrap">
+                <aura:iteration items="{!v.fields}" var="field">
+                    <div class="{!'slds-m-top_small slds-col slds-size_1-of-' + v.cols}">
+                        <lightning:inputField fieldName="{!field}"></lightning:inputField>
+                    </div>
+                </aura:iteration>
+            </div>
+            
+            <div class="slds-align_absolute-center slds-p-around_medium" >
+                <lightning:button label="{!$Label.c.LC00_Save}" variant="brand"  type="submit" name="save"></lightning:button>
+                <lightning:button label="{!$Label.c.LC00_Cancel}"  onclick="{!c.cancel}"></lightning:button>
+            </div>
+        </lightning:recordEditForm>
+        
+    </aura:if>
+   
+</aura:component>
