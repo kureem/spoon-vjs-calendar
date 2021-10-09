@@ -6,7 +6,7 @@ The component allows you to specify the fields to include in the form.
 
 Provided by <a href="http://www.spoonconsulting.com/" target="_blank">Spoon Consulting</a>
 
-<a href="https://githubsfdeploy.herokuapp.com/?owner=kureem&repo=spoon-customdetails" target="_blank"> <img src="https://andrewfawcett.files.wordpress.com/2014/09/deploy.png"></a>
+<a href="https://githubsfdeploy.herokuapp.com/?owner=kureem&repo=spoon-vjs-calendar" target="_blank"> <img src="https://andrewfawcett.files.wordpress.com/2014/09/deploy.png"></a>
 <br>
 
 ### Usage
