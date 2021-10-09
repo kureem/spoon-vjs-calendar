@@ -1,5 +1,0 @@
-<design:component>
-	<design:attribute name="defaultFields" label="Fields" description="Fields to display in form" default="ActionsPerformed__c,AlertRisk__c,DecisionTaken__c,DecisionToBeTaken__c,ActionPlan__c,NextMeetingPlanning__c,StatusSolution__c,FlashReportDate__c,StatusPlanning__c,StatusBudget__c" />
-    <design:attribute name="objectApiName" label="Object API Name" description="API Name of Object to create form" default="Project__c"/>
-    <design:attribute name="cols" label="Columns" description="The Number of colums to display in form" default="2"/>
-</design:component>

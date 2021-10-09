@@ -1,18 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>LC00_CustomDetails</members>
+
 		<members>TestSampleCalendarApp</members>
         <name>AuraDefinitionBundle</name>
     </types>
-    <types>
-        <members>LC00_Cancel</members>
-        <members>LC00_Edit</members>
-        <members>LC00_Save</members>
-        <members>LC00_Success</members>
-        <members>LC00_SuccessMsg</members>
-        <name>CustomLabel</name>
-    </types>
+
 	<types>
 		<members>sampleCalendar</members>
 		<name>LightningComponentBundle</name>
